@@ -19,6 +19,7 @@
     "express": "^4.16.3",
     "express-session": "^1.15.6",
     "express-xml-bodyparser": "^0.3.0",
+    "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.12",
     "mongoose-paginate": "^5.0.3",
     "mongoose-sequence": "^4.0.1",
@@ -26,6 +27,7 @@
     "normalize-bool": "^1.0.0",
     "passport": "^0.4.0",
     "passport-google-oauth": "^1.0.0",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "pug": "^2.0.3",
     "serve-favicon": "^2.5.0"
