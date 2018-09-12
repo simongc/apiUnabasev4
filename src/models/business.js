@@ -10,7 +10,7 @@ const businessSchema({
   name: String,
   legalName: String, // razón social,
   businessType: String, // giro
-  rut: String,
+  idnumber: String,
   phone: Object,  
 	address:{
 		street: String,
