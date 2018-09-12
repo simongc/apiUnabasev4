@@ -17,7 +17,8 @@ const businessSchema({
 		number: Number,
 		district: String,
 		city: String,
-		region: String
+    region: String,
+    country: String
   },
   email: Object,
   website: String,
