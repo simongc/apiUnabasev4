@@ -2,7 +2,7 @@ let mongoose = require('mongoose');
 
 let Schema = mongoose.Schema;
 
-const businessSchema({
+const businessSchema = Schema({
   isActive: { 
     type: Boolean,
     default: true
@@ -11,7 +11,7 @@ const businessSchema({
   legalName: String, // razón social,
   businessType: String, // giro
   idnumber: String,
-  phone: Object,  
+  phones: Array({type: String}),
 	address:{
 		street: String,
 		number: Number,
@@ -20,7 +20,7 @@ const businessSchema({
     region: String,
     country: String
   },
-  email: Object,
+  emails: Array({type: String}),
   website: String,
   v3: {
     ip: String,
@@ -29,11 +29,12 @@ const businessSchema({
     url: String,
 
   },
-  admins: {
+  creator: { type: Schema.Types.ObjectId, ref: 'User' },
+  admins: Array({
     description: String ,
-    { type: Schema.Types.ObjectId, ref: 'User' }
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
     
-  }
+  }),
   
 
 }, {timestamps: true});
